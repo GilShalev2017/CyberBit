@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkFormat(input) {
+
+        var regExpression = /^\d{4}(-(0[1-9]|1[012])(-(0[1-9]|[12][0-9]|3[01])(T([01]\d|2[0-3]):[0-5]\d(:[0-5]\d)?(\.\d+)?(([+-]([01]\d|2[0-3]):[0-5]\d)|Z))?)?)?$/i
+
+        return regExpression.test(input);z
+    }
+</script>
+
+<script>
+
+    document.writeln('Is 1997-31?' + checkFormat('1997-31') + '<br>');
+
+    document.writeln('Is 1997-07-16?' + checkFormat('1997-07-16') + '<br>');
+
+    document.writeln('Is 1A97?' + checkFormat('1A97') + '<br>');
+
+    document.writeln('Is 1897AA?' + checkFormat('1897AA') + '<br>');
+
+    document.writeln('Is 1997A?' + checkFormat('1997A') + '<br>');
+
+    document.writeln('Is D1997A?' + checkFormat('D1997A') + '<br>');
+
+    document.writeln('Is 1997-07-AA?' + checkFormat('1997-07-AA') + '<br>');
+
+    document.writeln('Is 1997-07-DD-55?' + checkFormat('1997-07-DD-55') + '<br>');
+
+    document.writeln('Is 1997-13-99?' + checkFormat('1997-13-99') + '<br>');
+
+    document.writeln('Is 1997-13-22?' + checkFormat('1997-13-22') + '<br>');
+
+    document.writeln('Is 1997-1-22?' + checkFormat('1997-1-22') + '<br>');
+
+    document.writeln('Is 1997-1-32?' + checkFormat('1997-1-32') + '<br>');
+
+    document.writeln('Is 1997-1-3?' + checkFormat('1997-1-3') + '<br>');
+
+    document.writeln('1997-07-16T19:20?' + checkFormat('1997-07-16T19:20') + '<br>');
+
+    document.writeln('1997-07-16T19:20:30?' + checkFormat('1997-07-16T19:20:30') + '<br>');
+
+    document.writeln('1997-07-16T19:20:30.45?' + checkFormat('1997-07-16T19:20:30.45') + '<br>');
+
+    document.writeln('1994-11-05T13:15:30Z?' + checkFormat('1994-11-05T13:15:30Z') + '<br>');
+
+    document.writeln('Is 1997?' + checkFormat('1997') + '<br>');
+
+    document.writeln('Is 1997-07?' + checkFormat('1997-07') + '<br>');
+
+    document.writeln('Is 1997-07-16?' + checkFormat('1997-07-16') + '<br>');
+
+    document.writeln('1997-07-16T19:20+01:00?' + checkFormat('1997-07-16T19:20+01:00') + '<br>');
+
+    document.writeln('1997-07-16T19:20:30+01:00?' + checkFormat('1997-07-16T19:20:30+01:00') + '<br>');
+
+    document.writeln('1997-07-16T19:20:30.45+01:00?' + checkFormat('1997-07-16T19:20:30.45+01:00') + '<br>');
+
+    document.writeln('1994-11-05T08:15:30-05:00?' + checkFormat('1994-11-05T08:15:30-05:00') + '<br>');
+
+    document.writeln('1994-11-05T13:15:30Z?' + checkFormat('1994-11-05T13:15:30Z') + '<br>');
+
+    document.writeln('2015-4-22T16:18:32.123Z?' + checkFormtat('2015-4-22T16:18:32.123Z') + '<br>');
+
+    document.writeln('2015-1-12T01:02:45.786Z?' + checkFormtat('2015-1-12T01:02:45.786Z') + '<br>');
+
+</script>
+
+</body>
+</html>

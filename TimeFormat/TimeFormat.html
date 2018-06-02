@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyberbit Time Format Excercise</title>
+    <script src="moment.js"></script>
+</head>
+<body>
+
+<!--https://stackoverflow.com/questions/12756159/regex-and-iso8601-formatted-datetime-->
+<script>
+    function checkFormtat(input) {
+
+//          //OK
+//        var re = /^([\+-]?\d{4}(?!\d{2}\b))((-?)((0[1-9]|1[0-2])(\3([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6])))([T\s]((([01]\d|2[0-3])((:?)[0-5]\d)?|24\:?00)([\.,]\d+(?!:))?)?(\17[0-5]\d([\.,]\d+)?)?([zZ]|([\+-])([01]\d|2[0-3]):?([0-5]\d)?)?)?)?$/
+//        return re.test(input);
+
+          //OK - best
+        var ISO_8601 = /^\d{4}(-\d\d(-\d\d(T\d\d:\d\d(:\d\d)?(\.\d+)?(([+-]\d\d:\d\d)|Z)?)?)?)?$/i
+        return ISO_8601.test(input);
+    }
+</script>
+
+<script>
+
+
+
+    document.writeln('Is 1997?' + checkFormtat('1997') + '<br>');
+
+    document.writeln('Is 1997-07?' + checkFormtat('1997-07') + '<br>');
+
+    document.writeln('Is 1997-07-16?' + checkFormtat('1997-07-16') + '<br>');
+
+    document.writeln('Is 1997-07-44?' + checkFormtat('1997-07-44') + '<br>');
+
+
+    document.writeln('1997-07-16T19:20+01:00?' + checkFormtat('1997-07-16T19:20+01:00') + '<br>');
+
+    document.writeln('1997-07-16T19:20:30+01:00?' + checkFormtat('1997-07-16T19:20:30+01:00') + '<br>');
+
+    document.writeln('1997-07-16T19:20:30.45+01:00?' + checkFormtat('1997-07-16T19:20:30.45+01:00') + '<br>');
+
+    document.writeln('1994-11-05T08:15:30-05:00?' + checkFormtat('1994-11-05T08:15:30-05:00') + '<br>');
+
+    document.writeln('1994-11-05T13:15:30Z?' + checkFormtat('1994-11-05T13:15:30Z') + '<br>');
+
+
+    document.writeln('2015-4-22T16:18:32.123Z?' + checkFormtat('2015-4-22T16:18:32.123Z') + '<br>');
+
+    document.writeln('2015-1-12T01:02:45.786Z?' + checkFormtat('2015-1-12T01:02:45.786Z') + '<br>');
+
+    document.writeln('2015-04-22T16:18:32.123Z?' + checkFormtat('2015-04-22T16:18:32.123Z') + '<br>');
+
+    document.writeln('2015-01-12T01:02:45.786Z?' + checkFormtat('2015-01-12T01:02:45.786Z') + '<br>');
+
+</script>
+</body>
+</html>

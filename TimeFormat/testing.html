@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkFormat(input) {
+        // write your code here
+
+//        var regExpression = /^\d{4}(-\d{2})?(-\d{2})?$/i;
+        var regExpression = /^0[1-9]|[12][0-9]|3[01]$/i;
+
+        //improvemnts chec month 1-12 and date 1->31
+//    ^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$
+        return regExpression.test(input);
+    }
+
+</script>
+
+<script>
+
+    document.writeln('1?' + checkFormat('1') + '<br>');
+    document.writeln('10?' + checkFormat('10') + '<br>');
+    document.writeln('01?' + checkFormat('01') + '<br>');
+    document.writeln('11?' + checkFormat('11') + '<br>');
+    document.writeln('12?' + checkFormat('21') + '<br>');
+
+    document.writeln('31?' + checkFormat('31') + '<br>');
+    document.writeln('30?' + checkFormat('30') + '<br>');
+    document.writeln('12?' + checkFormat('12') + '<br>');
+    document.writeln('32?' + checkFormat('32') + '<br>');
+    document.writeln('40?' + checkFormat('40') + '<br>');
+</script>
+
+</body>
+</html>

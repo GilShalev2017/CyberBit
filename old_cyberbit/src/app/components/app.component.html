@@ -1,0 +1,79 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-3">
+            <h3>1 Select Blackboxes</h3>
+
+            <div class="dropdown"
+                 dropdown
+                 dropdownToggle>
+                Company name
+                <i class="fa fa-filter" ></i>
+                <ul class="dropdown-menu">
+                    <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+                    <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li class="divider dropdown-divider"></li>
+                    <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3">
+            <h3>2 Select Protocols</h3>
+        </div>
+
+        <div class="col-sm-3">
+            <h3>3 Select Time Period</h3>
+        </div>
+
+        <div class="col-sm-3">
+            <h3>Summary</h3>
+        </div>
+    </div>
+
+    <alert type="success">hello</alert>
+
+    <ul>
+        <li> <input type="checkbox" [(ngModel)]="selectedAll" (change)="selectAll();"/>
+        </li>
+        <li *ngFor="let n of names">
+            <input type="checkbox" [(ngModel)]="n.selected" (change)="checkIfAllSelected();">
+            {{n.name}}
+        </li>
+    </ul>
+
+    <div class="btn-group" dropdown>
+        <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+            Button dropdown <span class="caret"></span>
+            <input type="checkbox">
+        </button>
+        <ul *dropdownMenu class="dropdown-menu" role="menu">
+            <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+            <li class="divider dropdown-divider"></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="dropdown"
+         dropdown
+         dropdownToggle>
+        Company name
+        <i class="fa fa-filter" ></i>
+        <ul class="dropdown-menu">
+            <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+            <li class="divider dropdown-divider"></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
